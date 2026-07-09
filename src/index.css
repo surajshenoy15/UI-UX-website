@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Dark is the default. The middle of the page lifts into light,
+     then falls back to dark for the close. */
+  :root {
+    --ink: 4 9 26;
+    --navy: 10 23 51;
+    --surface: 14 32 73;
+    --edge: 28 53 100;
+    --azure: 77 141 255;
+    --sky: 143 184 255;
+    --fore: 255 255 255;
+    --mist: 163 182 214;
+    --paper: 255 255 255;
+    --paper-ink: 4 9 26;
+    --grid: 28 53 100;
+    color-scheme: dark;
+  }
+
+  html.theme-light {
+    --ink: 241 245 251;
+    --navy: 255 255 255;
+    --surface: 255 255 255;
+    --edge: 209 219 236;
+    --azure: 29 78 216;
+    --sky: 59 130 246;
+    --fore: 6 16 40;
+    --mist: 79 95 128;
+    --paper: 6 16 40;
+    --paper-ink: 255 255 255;
+    --grid: 190 204 228;
+    color-scheme: light;
+  }
+
+  * { -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-ink text-fore font-body antialiased;
+    overflow-x: hidden;
+    transition: background-color 0.9s ease, color 0.9s ease;
+  }
+  ::selection { background: rgb(var(--azure)); color: rgb(var(--paper-ink)); }
+  :focus-visible { outline: 2px solid rgb(var(--azure)); outline-offset: 3px; border-radius: 6px; }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: rgb(var(--ink)); }
+  ::-webkit-scrollbar-thumb { background: rgb(var(--edge)); border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgb(var(--azure)); }
+  @media (pointer: fine) { body { cursor: none; } a, button, input { cursor: none; } }
+}
+
+@layer components {
+  .shell { @apply mx-auto w-full max-w-6xl px-6 sm:px-10; }
+  .band  { @apply py-24 sm:py-32; }
+
+  .eyebrow { @apply inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-azure; }
+  .eyebrow::before { content: ''; @apply block h-px w-6 bg-azure/60 transition-all duration-500; }
+  .group\/sec:hover .eyebrow::before { @apply w-12; }
+
+  .rule { @apply h-px w-full bg-edge; }
+
+  .card {
+    @apply relative overflow-hidden rounded-2xl border border-edge bg-surface
+           transition-[transform,border-color,box-shadow,background-color] duration-500 ease-out;
+  }
+  .card:hover { @apply border-azure/50; box-shadow: 0 24px 60px -32px rgb(var(--azure) / 0.5); }
+
+  .link-sweep { @apply relative inline-block; }
+  .link-sweep::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-out;
+  }
+  .link-sweep:hover::after { @apply origin-left scale-x-100; }
+
+  .shine { @apply relative overflow-hidden; }
+  .shine::before {
+    content: '';
+    @apply pointer-events-none absolute inset-0 -translate-x-[120%] skew-x-12;
+    background: linear-gradient(90deg, transparent, rgb(var(--paper-ink) / 0.22), transparent);
+    transition: transform 0.75s ease;
+  }
+  .shine:hover::before { transform: translateX(120%) skewX(12deg); }
+}
+
+.perspective     { perspective: 1200px; }
+.perspective-far { perspective: 1800px; }
+.preserve-3d     { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; }
+
+.grid-lines {
+  background-image:
+    linear-gradient(to right, rgb(var(--grid) / 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--grid) / 0.5) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 75% 55% at 50% 0%, #000 35%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  @media (pointer: fine) { body, a, button, input { cursor: auto; } }
+}
