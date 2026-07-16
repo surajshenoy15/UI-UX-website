@@ -5,6 +5,7 @@ import { Intro, Grain, startBgm } from './components/Cinema'
 import Gate from './components/Gate'
 import Hero from './components/Hero'
 import About from './components/About'
+import DesignSystem from './components/DesignSystem'
 import Work from './components/Work'
 import Timeline from './components/Timeline'
 import { Skills, Beyond, Contact } from './components/Sections'
@@ -19,6 +20,7 @@ function DesignSite({ onSwitch }) {
         <Hero />
         <Marquee />
         <About />
+        <DesignSystem />
         <Work />
         <Timeline />
         <Skills />

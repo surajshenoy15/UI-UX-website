@@ -45,6 +45,12 @@ Type: **Syne** (display) · **Space Grotesk** (body) · **JetBrains Mono** (labe
 ## Signature element
 Three planes suspended in real 3D space (`perspective: 1800px`), wired together by threads that run between them along the Z axis. Drag the slider and the work travels forward: **01 Wireframe** (hatched boxes) → **02 Flow** (a node graph with particles traveling the threads via `animateMotion`) → **03 Interface** (a working dashboard — bars grow, the Publish button pulses, a cursor lands on it). Planes crossfade on overlapping ramps and the whole deck pushes toward you as fidelity rises. Tilt follows the pointer.
 
+## Design DNA section (designer mode)
+`src/components/DesignSystem.jsx`, between About and Work:
+- **Palette** — swatches read the live CSS variables, so they change when the scroll theme flips. Hover expands a swatch, click copies its hex.
+- **Typography** — Syne / Space Grotesk / JetBrains Mono specimen with weight buttons, a size slider, and an editable preview line (click and type).
+- **Design wheel** — a draggable hue ring (keyboard-accessible: arrow keys) with Complementary / Analogous / Triadic / Split-comp harmonies, applied live to a preview card that recolors as you drag.
+
 ## Spacing system
 Two utilities carry the whole rhythm: `.shell` (max-w-6xl, px-6/sm:px-10) and `.band` (py-24/sm:py-32). Every section uses both, so nothing drifts. Gaps are 6/px-based, card padding is a flat `p-8`, list line-height is `1.75`.
 

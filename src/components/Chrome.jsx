@@ -7,6 +7,7 @@ import { Magnetic, SplitWords, Reveal, EASE } from './motion'
 
 const links = [
   { id: 'about', label: 'About' },
+  { id: 'system', label: 'System' },
   { id: 'work', label: 'Work' },
   { id: 'timeline', label: 'Experience' },
   { id: 'skills', label: 'Skills' },
