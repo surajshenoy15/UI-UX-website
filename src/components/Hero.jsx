@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion
 import { ArrowDown, Circle, MousePointer2, Search, Bell, TrendingUp, Users } from 'lucide-react'
 import { profile } from '../data'
 import { Magnetic, CountUp, ScatterText, useTilt, EASE } from './motion'
+import { ParticleField } from './Cinema'
 
 /* =============================================================
    Signature — three planes suspended in real 3D space, wired
@@ -92,7 +93,7 @@ function ThreadGraph({ t }) {
             {!reduce && t > 0.5 && (
               <motion.circle
                 r="1.7"
-                fill="rgb(var(--sky))"
+                fill="rgb(var(--cyan))"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
@@ -260,7 +261,7 @@ function InterPlaneThreads({ f }) {
               style={{
                 height: 1,
                 transform: `rotateY(90deg) translateZ(${seg === 0 ? 0 : -145}px)`,
-                background: 'linear-gradient(90deg, rgb(var(--azure)/0.6), rgb(var(--azure)/0))',
+                background: 'linear-gradient(90deg, rgb(var(--cyan)/0.7), rgb(var(--cyan)/0))',
               }}
               animate={{ width: 145 * (0.4 + f * 0.6), opacity: 0.25 + f * 0.55 }}
               transition={{ duration: 0.5 }}
@@ -292,13 +293,14 @@ function FidelityStack() {
         ref={tilt.ref}
         onPointerMove={tilt.onPointerMove}
         onPointerLeave={tilt.onPointerLeave}
-        className="perspective-far relative h-[350px] w-full sm:h-[400px]"
+        className="perspective-far relative h-[300px] w-full sm:h-[400px]"
       >
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-azure/10 blur-[100px]" aria-hidden />
+        <ParticleField density={70} />
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan/10 blur-[100px]" aria-hidden />
 
         <motion.div
           style={{ ...tilt.style, translateZ: push }}
-          className="preserve-3d h-full w-full"
+          className="preserve-3d h-full w-full scale-[0.78] sm:scale-100"
         >
           <InterPlaneThreads f={f} />
 
@@ -324,7 +326,7 @@ function FidelityStack() {
           >
             <span className="relative block">
               <MousePointer2 className="h-5 w-5 fill-fore text-fore drop-shadow-[0_2px_10px_rgb(0_0_0_/_0.7)]" />
-              {live > 0.6 && <span className="absolute -left-1.5 -top-1.5 h-8 w-8 rounded-full border border-azure animate-pulse-ring" />}
+              {live > 0.6 && <span className="absolute -left-1.5 -top-1.5 h-8 w-8 rounded-full border border-cyan animate-pulse-ring" />}
             </span>
           </motion.div>
         </motion.div>
@@ -372,7 +374,7 @@ export default function Hero() {
     <section id="top" data-theme="dark" className="relative overflow-hidden pb-20 pt-32 sm:pb-28 sm:pt-40">
       <div className="pointer-events-none absolute inset-0 grid-lines" aria-hidden />
       <div className="pointer-events-none absolute -left-48 top-24 h-[460px] w-[460px] rounded-full bg-azure/10 blur-[150px]" aria-hidden />
-      <div className="pointer-events-none absolute -right-40 top-72 h-[380px] w-[380px] rounded-full bg-sky/[0.07] blur-[140px]" aria-hidden />
+      <div className="pointer-events-none absolute -right-40 top-72 h-[380px] w-[380px] rounded-full bg-cyan/[0.08] blur-[140px]" aria-hidden />
 
       <div className="shell relative">
         <div className="grid items-center gap-20 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">

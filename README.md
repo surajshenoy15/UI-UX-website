@@ -1,4 +1,10 @@
-# P Suraj Shenoy — UI/UX Designer Portfolio
+# P Suraj Shenoy — Dual-Mode Portfolio
+
+One site, two interfaces. A cinematic gate asks the visitor to choose:
+- **UI/UX Designer** — the studio. Azure/navy, 3D fidelity stack, bento about, Figma prototype buttons, scroll-driven light/dark theme.
+- **Software Engineer** — the terminal. Green-on-black, a shell that types itself, projects as repos with **Open live project** buttons, experience as a `git log`, skills as a `package.json`.
+
+The choice persists per session (`sessionStorage.mode`); both navs carry a switch back to the gate.
 
 React + Vite + Tailwind CSS. Framer Motion for animation, lucide-react for icons. No emoji.
 
@@ -29,6 +35,13 @@ Each section carries `data-theme="dark"` or `"light"`. `ThemeScroll` watches whi
 
 Type: **Syne** (display) · **Space Grotesk** (body) · **JetBrains Mono** (labels, data).
 
+## Cinematic layer
+- **Intro title card** — letterbox bars, name types on, cyan rule draws; plays once per session (`sessionStorage`).
+- **Film grain + vignette** — fixed SVG-noise overlay stepping at 0.8s, radial vignette; both soften in light mode, grain disabled under reduced motion.
+- **Cyan particle field** — a canvas starfield flying past in 3D with pointer parallax and depth streaks; runs behind the hero stack and the contact section, pauses off-screen and in hidden tabs, halves density on mobile.
+- **Music is ON by default** and file-first. Drop `bgm-design.mp3` and `bgm-sde.mp3` into `public/` (see `public/BGM_README.txt`); the score starts on the gate click (a user gesture, so browsers allow it), fades in to 0.35, and swaps tracks when you switch modes. The nav toggle mutes, remembered for the session. If a file is missing, a built-in generative score (Web Audio API) plays instead — the site never goes silent by accident. On a mid-session reload, browsers may block autoplay until the first click; the manager handles that quietly.
+- **Loader plays on every visit** — letterbox intro card, then the gate.
+
 ## Signature element
 Three planes suspended in real 3D space (`perspective: 1800px`), wired together by threads that run between them along the Z axis. Drag the slider and the work travels forward: **01 Wireframe** (hatched boxes) → **02 Flow** (a node graph with particles traveling the threads via `animateMotion`) → **03 Interface** (a working dashboard — bars grow, the Publish button pulses, a cursor lands on it). Planes crossfade on overlapping ramps and the whole deck pushes toward you as fidelity rises. Tilt follows the pointer.
 
@@ -52,6 +65,4 @@ Visible keyboard focus rings, `aria-expanded` on accordions, arrow-key carousel,
 Each project in `src/data.js` has a `figma` field. The detail panel renders a **View the prototype** button that opens it in a new tab. Drop the field (or set it to an empty string) and the button falls back to a disabled "Prototype coming soon" pill.
 
 ## Before deploying
-In `src/data.js`, replace:
-- `linkedin` and `github` URLs — placeholders
-- the four `figma:` URLs — every one currently says `REPLACE_ME`
+In `src/data.js` → `sde.projects`, replace the five `live:` fields (currently `REPLACE_ME_...`) with your hosted URLs — Play Store, Vercel, Render, etc. Until then those cards show a graceful "Deploy link pending" pill instead of the button. Figma links and socials are already real.

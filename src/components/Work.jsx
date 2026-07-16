@@ -14,7 +14,7 @@ function Card({ p, offset, onSelect }) {
       aria-label={`${p.name} — ${p.kind}`}
       tabIndex={offset === 0 ? 0 : -1}
       animate={{
-        x: offset * 186,
+        x: offset * (typeof window !== 'undefined' && window.innerWidth < 640 ? 120 : 186),
         rotateY: offset * -24,
         scale: 1 - abs * 0.09,
         opacity: hidden ? 0 : 1 - abs * 0.3,
@@ -23,7 +23,7 @@ function Card({ p, offset, onSelect }) {
       whileHover={offset === 0 ? { scale: 1.03, y: -6 } : {}}
       transition={{ type: 'spring', stiffness: 190, damping: 26 }}
       style={{ zIndex: 10 - abs, pointerEvents: hidden ? 'none' : 'auto', translateZ: -abs * 240 }}
-      className="preserve-3d backface-hidden absolute h-[440px] w-[280px] overflow-hidden rounded-3xl border border-edge bg-surface text-left sm:h-[470px] sm:w-[330px]"
+      className="preserve-3d backface-hidden absolute h-[430px] w-[min(280px,82vw)] overflow-hidden rounded-3xl border border-edge bg-surface text-left sm:h-[470px] sm:w-[330px]"
     >
       <Spotlight className="h-full">
         <div className="absolute inset-x-0 top-0 h-40 opacity-60" style={{ background: `radial-gradient(120% 100% at 50% 0%, ${p.accent}30, transparent 70%)` }} />

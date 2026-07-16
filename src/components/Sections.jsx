@@ -8,6 +8,7 @@ import {
 import { skills, education, leadership, languages, interests, profile } from '../data'
 import { Section } from './Chrome'
 import { Magnetic, Reveal, Spotlight, SplitWords, useTilt, EASE } from './motion'
+import { ParticleField } from './Cinema'
 
 const iconMap = { PenTool, Code2, Database, Clapperboard, Sparkles, Activity, Layers, Film, Cpu }
 
@@ -131,7 +132,7 @@ export function Beyond() {
                         whileInView={{ width: `${l.pct}%` }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: 0.1 + i * 0.09, ease: EASE }}
-                        className="h-full rounded-full bg-gradient-to-r from-azure to-sky"
+                        className="h-full rounded-full bg-gradient-to-r from-azure to-cyan"
                       />
                     </div>
                   </li>
@@ -192,7 +193,8 @@ export function Contact() {
 
   return (
     <section id="contact" data-theme="dark" className="band relative scroll-mt-24 overflow-hidden">
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[540px] w-[540px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-azure/10 blur-[150px]" aria-hidden />
+      <ParticleField density={80} />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[540px] w-[540px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan/10 blur-[150px]" aria-hidden />
       <div className="shell relative text-center">
         <Reveal>
           <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-azure">Contact</p>

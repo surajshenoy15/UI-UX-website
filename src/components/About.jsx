@@ -40,7 +40,7 @@ function ToolRing() {
           )
         })}
       </div>
-      <div className="pointer-events-none absolute h-40 w-40 rounded-full bg-azure/15 blur-[70px]" aria-hidden />
+      <div className="pointer-events-none absolute h-40 w-40 rounded-full bg-cyan/15 blur-[70px]" aria-hidden />
       <div className="pointer-events-none absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-ink to-transparent" aria-hidden />
       <div className="pointer-events-none absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-ink to-transparent" aria-hidden />
     </div>

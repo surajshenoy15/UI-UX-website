@@ -209,7 +209,7 @@ export const education = [
 
 export const leadership = [
   {
-    role: 'Brand Dev Lead',
+    role: 'Social Media Lead',
     org: 'SIGGRAPH BNMIT — Computer Graphics Club',
     points: [
       'Led brand development and digital presence for a 250+ member computer graphics community.',
@@ -243,3 +243,165 @@ export const interests = [
   { label: 'Video editing and cinematic storytelling', icon: 'Film' },
   { label: 'AI-driven applications', icon: 'Cpu' },
 ]
+
+/* ================= SDE MODE ================= */
+export const sde = {
+  summary:
+    'AI & ML undergraduate skilled in full-stack development, mobile app development, AWS deployment, cloud solutions, and UI/UX design. I build scalable web apps, AI-driven platforms, admin dashboards, and cross-platform mobile applications — and deploy them.',
+  stack: ['MERN', 'React + Vite', 'Node.js', 'Django', 'FastAPI', 'Spring Boot', 'Supabase', 'Firebase', 'SQL', 'AWS'],
+  stats: [
+    { value: '5', label: 'Internships' },
+    { value: '2', label: 'Apps on stores' },
+    { value: '6+', label: 'Deployed products' },
+    { value: '9.22', label: 'CGPA' },
+  ],
+  experience: [
+    {
+      id: 'loraa',
+      role: 'SDE Intern',
+      company: 'LoRaa Ventures',
+      period: 'Jul 2026 — Present',
+      hash: 'a3f9c2e',
+      points: [
+        'Developed LoRaa Connect, a role-based mobile and web platform for tracking student participation, AICTE activity points, and certificate generation.',
+        'Built and integrated FastAPI backend APIs with a React Native mobile app and admin/faculty dashboards for event registration, activity submissions, approvals, and real-time monitoring.',
+        'Implemented geofencing, face verification, QR-based certificates, secure photo submissions, and fraud-prevention checks for authentic activity tracking.',
+        'Deployed the mobile application on both the Google Play Store and Apple App Store.',
+      ],
+      stack: ['React Native', 'FastAPI', 'PostgreSQL', 'Play Store', 'App Store'],
+    },
+    {
+      id: 'salesforce',
+      role: 'Project Trainee',
+      company: 'Salesforce India Pvt Ltd',
+      period: 'May 2026 — Present',
+      hash: 'b71d04f',
+      points: [
+        'Developed PricePilot AI, a Spring Boot-based smart pricing platform for sales analytics, discount management, and AI-assisted price recommendations.',
+        'Built REST APIs using Java, Spring Boot, JPA/Hibernate, and PostgreSQL for recommendation, pricing, analytics, discount, and competitor price modules.',
+        'Integrated a React frontend with backend APIs to display real-time sales metrics, price snapshots, and product performance insights.',
+        'Implemented a competitor price scraping MVP and pricing recommendation logic to support data-driven business decisions.',
+      ],
+      stack: ['Java', 'Spring Boot', 'JPA/Hibernate', 'PostgreSQL', 'React'],
+    },
+    {
+      id: 'bmc',
+      role: 'Mobile App Developer Intern',
+      company: 'The Bengaluru Marketing Company',
+      period: 'Feb 2026 — May 2026',
+      hash: 'c9e2a18',
+      points: [
+        'Built cross-platform mobile application features for Android and iOS using React Native.',
+        'Integrated FastAPI backends and consumed REST APIs.',
+        'Worked with geofencing, face recognition, and image processing techniques for activity verification.',
+        'Followed industry-standard development practices for scalable mobile features.',
+      ],
+      stack: ['React Native', 'FastAPI', 'REST', 'Geofencing'],
+    },
+    {
+      id: 'savvywise',
+      role: 'UI/UX Designer Intern',
+      company: 'SavvyWise, Australia',
+      period: 'Sep 2025 — Nov 2025',
+      hash: 'd45b7c3',
+      points: [
+        'Designed user-centric UI/UX for an Australian tax audit and compliance platform, creating high-fidelity wireframes and interactive prototypes in Figma.',
+        'Enhanced dashboard usability, accessibility, and responsiveness by applying modern UI standards, typography, and color systems.',
+        'Collaborated with developers and stakeholders to translate business requirements into effective design solutions.',
+      ],
+      stack: ['Figma', 'Prototyping', 'Design Systems'],
+    },
+    {
+      id: 'asha',
+      role: 'SDE Intern',
+      company: 'Asha Infracore, Bangalore',
+      period: 'Jun 2025 — Aug 2025',
+      hash: 'e88f210',
+      points: [
+        'Developed and deployed the Asha Infracore company website using React + Vite with a responsive, modern UI/UX.',
+        'Built a Node.js + Supabase backend with product management features — CRUD, image uploads, category-based rendering — and secure admin access.',
+        'Implemented a quotation request system and deployed with Google Search Console integration for visibility and SEO.',
+      ],
+      stack: ['React + Vite', 'Node.js', 'Supabase', 'SEO'],
+    },
+  ],
+  projects: [
+    {
+      id: 'tracenet',
+      name: 'TraceNet AI',
+      kind: 'OSINT Digital Footprint Intelligence',
+      period: 'May 2026 — Present',
+      lang: 'Python',
+      live: 'REPLACE_ME_HOSTED_LINK',
+      points: [
+        'OSINT-based web platform for analyzing public digital footprints using usernames, emails, phone numbers, profile URLs, images, and chat text.',
+        'Modules for entity extraction, fuzzy matching, image similarity, writing-style analysis, and relationship graph generation for suspect profiling.',
+        'AI-assisted report generation with confidence scoring and citation-backed insights — lawful public-data analysis with investigator-friendly dashboards.',
+      ],
+      stack: ['Python', 'AI/ML', 'Graph Analysis', 'React'],
+    },
+    {
+      id: 'pricepilot',
+      name: 'PricePilot AI',
+      kind: 'Dynamic Pricing & Competitor Intelligence',
+      period: 'May 2026 — Jul 2026',
+      lang: 'Java',
+      live: 'REPLACE_ME_HOSTED_LINK',
+      points: [
+        'AI-powered web platform for dynamic pricing, sales analytics, and competitor price intelligence for retail businesses.',
+        'Modules for product management, price recommendations, sales performance tracking, discount strategy, analytics dashboards, and competitor comparison.',
+        'Backend-driven recommendation logic with clean React dashboards — real-time insights and business-friendly decision support.',
+      ],
+      stack: ['Spring Boot', 'PostgreSQL', 'React', 'REST'],
+    },
+    {
+      id: 'loraa-connect',
+      name: 'LoRaa Connect',
+      kind: 'Student Activity Platform — Android & iOS',
+      period: 'Jul 2026 — Present',
+      lang: 'TypeScript',
+      live: 'REPLACE_ME_PLAY_STORE_LINK',
+      points: [
+        'Role-based mobile and web platform for student participation, AICTE activity points, and certificate generation.',
+        'Geofencing, face verification, QR certificates, and fraud-prevention checks.',
+        'Shipped to both the Google Play Store and the Apple App Store.',
+      ],
+      stack: ['React Native', 'FastAPI', 'Deployed'],
+    },
+    {
+      id: 'vn-music',
+      name: 'VN Music Academy',
+      kind: 'Academy Management Platform',
+      period: 'Aug 2025 — Oct 2025',
+      lang: 'JavaScript',
+      live: 'REPLACE_ME_HOSTED_LINK',
+      points: [
+        'Management platform built with React + Vite and Node.js + Supabase, designed in Figma.',
+        'Secure payment gateway integration; admin panel with student attendance, course tracking, and event management.',
+        'Live on Vercel (frontend) and Render (backend), indexed via Google Search Console for SEO.',
+      ],
+      stack: ['React + Vite', 'Node.js', 'Supabase', 'Vercel'],
+    },
+    {
+      id: 'asha-site',
+      name: 'Asha Infracore',
+      kind: 'Corporate Website + Admin',
+      period: 'Jun 2025 — Aug 2025',
+      lang: 'JavaScript',
+      live: 'REPLACE_ME_HOSTED_LINK',
+      points: [
+        'Company website with responsive modern UI/UX, deployed with SEO via Google Search Console.',
+        'Node.js + Supabase backend: CRUD, image uploads, category-based rendering, secure admin access.',
+        'Quotation request system for lead capture.',
+      ],
+      stack: ['React + Vite', 'Node.js', 'Supabase', 'Deployed'],
+    },
+  ],
+  skills: [
+    { group: 'Programming', items: ['Python', 'Java', 'C++', 'JavaScript', 'HTML/CSS'] },
+    { group: 'Web & App', items: ['MERN Stack', 'React + Vite', 'React Native', 'Django', 'FastAPI', 'Spring Boot', 'Geofencing', 'Face Recognition', 'Attendance Systems'] },
+    { group: 'Data & Infra', items: ['MySQL', 'Supabase', 'Firebase', 'SQL', 'REST APIs', 'Google Maps API', 'AWS', 'Vercel', 'Render'] },
+    { group: 'AI & ML', items: ['Scikit-Learn', 'TensorFlow', 'Keras', 'Hugging Face'] },
+    { group: 'UI/UX & Frontend', items: ['Figma', 'ReactJS', 'Tailwind CSS', 'Bootstrap', 'Material UI'] },
+  ],
+}

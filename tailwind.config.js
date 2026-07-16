@@ -12,6 +12,7 @@ export default {
         edge: v('--edge'),
         azure: v('--azure'),
         sky: v('--sky'),
+        cyan: v('--cyan'),
         fore: v('--fore'),
         mist: v('--mist'),
         paper: v('--paper'),

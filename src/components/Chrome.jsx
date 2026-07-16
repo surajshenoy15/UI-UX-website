@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion, useScroll, useSpring, useMotionValue, useReducedMotion } from 'framer-motion'
 import { Mail, Github, Linkedin, ArrowUpRight, Menu, X } from 'lucide-react'
 import { profile } from '../data'
+import { Bgm } from './Cinema'
 import { Magnetic, SplitWords, Reveal, EASE } from './motion'
 
 const links = [
@@ -124,7 +125,7 @@ export function Cursor() {
   )
 }
 
-export function Nav() {
+export function Nav({ onSwitch }) {
   const [solid, setSolid] = useState(false)
   const [active, setActive] = useState('')
   const [open, setOpen] = useState(false)
@@ -196,6 +197,15 @@ export function Nav() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <Bgm mode="design" />
+          {onSwitch && (
+            <button
+              onClick={onSwitch}
+              className="hidden items-center gap-2 rounded-full border border-edge px-4 py-2 font-mono text-[10px] uppercase tracking-[0.16em] text-mist transition-colors duration-300 hover:border-cyan hover:text-fore md:inline-flex"
+            >
+              Switch mode
+            </button>
+          )}
           <Magnetic strength={0.25} className="hidden sm:inline-block">
             <a
               href={`mailto:${profile.email}`}

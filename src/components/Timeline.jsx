@@ -110,7 +110,7 @@ export default function Timeline() {
     >
       <div ref={ref} className="relative">
         <div className="absolute left-[14px] top-0 h-full w-px bg-edge sm:left-[30px]" aria-hidden />
-        <motion.div style={{ height }} className="absolute left-[14px] top-0 w-px bg-gradient-to-b from-azure via-sky to-fore sm:left-[30px]" aria-hidden />
+        <motion.div style={{ height }} className="absolute left-[14px] top-0 w-px bg-gradient-to-b from-azure via-cyan to-fore sm:left-[30px]" aria-hidden />
         <ul className="space-y-7">
           {experience.map((job) => (
             <Track key={job.id} job={job} open={open === job.id} onToggle={() => setOpen(open === job.id ? null : job.id)} />
