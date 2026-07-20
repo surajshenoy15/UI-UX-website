@@ -332,7 +332,7 @@ export const sde = {
       kind: 'OSINT Digital Footprint Intelligence',
       period: 'May 2026 — Present',
       lang: 'Python',
-      live: 'REPLACE_ME_HOSTED_LINK',
+      live: 'https://tracenet-ai.vercel.app/login',
       points: [
         'OSINT-based web platform for analyzing public digital footprints using usernames, emails, phone numbers, profile URLs, images, and chat text.',
         'Modules for entity extraction, fuzzy matching, image similarity, writing-style analysis, and relationship graph generation for suspect profiling.',
@@ -346,7 +346,7 @@ export const sde = {
       kind: 'Dynamic Pricing & Competitor Intelligence',
       period: 'May 2026 — Jul 2026',
       lang: 'Java',
-      live: 'REPLACE_ME_HOSTED_LINK',
+      live: 'https://pricepilot-ai-sable.vercel.app/',
       points: [
         'AI-powered web platform for dynamic pricing, sales analytics, and competitor price intelligence for retail businesses.',
         'Modules for product management, price recommendations, sales performance tracking, discount strategy, analytics dashboards, and competitor comparison.',
@@ -360,7 +360,7 @@ export const sde = {
       kind: 'Student Activity Platform — Android & iOS',
       period: 'Jul 2026 — Present',
       lang: 'TypeScript',
-      live: 'REPLACE_ME_PLAY_STORE_LINK',
+      live: 'https://apps.apple.com/in/app/loraa-connect/id6778459793',
       points: [
         'Role-based mobile and web platform for student participation, AICTE activity points, and certificate generation.',
         'Geofencing, face verification, QR certificates, and fraud-prevention checks.',
@@ -374,7 +374,7 @@ export const sde = {
       kind: 'Academy Management Platform',
       period: 'Aug 2025 — Oct 2025',
       lang: 'JavaScript',
-      live: 'REPLACE_ME_HOSTED_LINK',
+      live: 'https://www.vnmusicacademy.com',
       points: [
         'Management platform built with React + Vite and Node.js + Supabase, designed in Figma.',
         'Secure payment gateway integration; admin panel with student attendance, course tracking, and event management.',
@@ -388,7 +388,7 @@ export const sde = {
       kind: 'Corporate Website + Admin',
       period: 'Jun 2025 — Aug 2025',
       lang: 'JavaScript',
-      live: 'REPLACE_ME_HOSTED_LINK',
+      live: 'https://www.ashainfracore.com',
       points: [
         'Company website with responsive modern UI/UX, deployed with SEO via Google Search Console.',
         'Node.js + Supabase backend: CRUD, image uploads, category-based rendering, secure admin access.',
