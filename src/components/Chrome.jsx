@@ -640,7 +640,7 @@ export function Nav({ onSwitch }) {
               aria-label="Switch portfolio mode"
               className="pointer-events-auto relative z-[10001] hidden min-h-10 touch-manipulation select-none items-center justify-center whitespace-nowrap rounded-full border border-edge bg-ink/70 px-3 py-2 font-mono text-[9px] uppercase tracking-[0.14em] text-mist outline-none transition-all duration-300 hover:border-cyan hover:bg-cyan/10 hover:text-fore active:scale-95 focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-ink lg:inline-flex xl:px-4 xl:text-[10px] xl:tracking-[0.16em]"
             >
-              Switch mode
+              Developer mode
             </button>
           )}
 
