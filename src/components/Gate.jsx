@@ -13,6 +13,7 @@ const SIDES = [
   {
     id: 'design',
     label: 'UI / UX Designer',
+    lines: ['UI / UX', 'Designer'],
     tag: '01 — Interface',
     line: 'Flows, screens, systems. Dense data made obvious.',
     Icon: PenTool,
@@ -23,6 +24,7 @@ const SIDES = [
   {
     id: 'sde',
     label: 'Software Engineer',
+    lines: ['Software', 'Engineer'],
     tag: '02 — Terminal',
     line: 'Full-stack builds, mobile apps, shipped to production.',
     Icon: Terminal,
@@ -93,20 +95,34 @@ function Panel({ side, hovered, anyHover, onHover, onPick, index }) {
         </div>
 
         <div>
-          <h2 className="font-display text-[clamp(2rem,5.5vw,4.2rem)] font-extrabold leading-[0.95] tracking-tighter text-white">
-            {side.label.split(' ').map((w, i) => (
-              <span key={i} className="block overflow-hidden">
-                <motion.span
-                  initial={{ y: '105%' }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 + index * 0.12 + i * 0.07, ease: EASE }}
-                  className="block"
-                >
-                  {w}
-                </motion.span>
-              </span>
-            ))}
-          </h2>
+          <h2
+  className="max-w-full font-display text-[clamp(2rem,10vw,4.2rem)] font-extrabold leading-[0.92] tracking-[-0.045em] text-white lg:text-[clamp(2rem,5.5vw,4.2rem)]"
+  aria-label={side.label}
+>
+  {side.lines.map((line, lineIndex) => (
+    <span
+      key={line}
+      className="block max-w-full overflow-hidden"
+      aria-hidden="true"
+    >
+      <motion.span
+        initial={{ y: '105%' }}
+        animate={{ y: 0 }}
+        transition={{
+          duration: 0.8,
+          delay:
+            0.5 +
+            index * 0.12 +
+            lineIndex * 0.09,
+          ease: EASE,
+        }}
+        className="block whitespace-nowrap"
+      >
+        {line}
+      </motion.span>
+    </span>
+  ))}
+</h2>
           <p className="mt-5 max-w-sm text-sm leading-[1.75] text-white/55">{side.line}</p>
           <span
             className="mt-8 inline-flex items-center gap-3 rounded-full border px-6 py-3.5 font-mono text-[11px] uppercase tracking-[0.2em] transition-all duration-300"

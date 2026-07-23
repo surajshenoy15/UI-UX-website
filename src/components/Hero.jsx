@@ -394,24 +394,56 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            <h1 className="mt-8 font-display font-extrabold tracking-tighter">
-              <motion.span
-                initial={{ opacity: 0, x: -14 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
-                className="block text-[clamp(2.5rem,6.4vw,4.4rem)] leading-[0.94]"
-              >
-                <ScatterText text="P Suraj     Shenoy" />
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, x: -14 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: 0.22, ease: EASE }}
-                className="mt-4 block text-[clamp(1.35rem,3.2vw,2.2rem)] font-bold leading-tight text-azure"
-              >
-                UI/UX Designer
-              </motion.span>
-            </h1>
+            <h1
+  className="mt-8 min-w-0 max-w-full font-display font-extrabold tracking-[-0.055em]"
+  aria-label="P Suraj Shenoy, UI/UX Designer"
+>
+  {/* Name */}
+  <div
+    className="max-w-full text-[clamp(2.8rem,13.5vw,4.4rem)] leading-[0.86]"
+    aria-hidden="true"
+  >
+    <motion.span
+      initial={{ opacity: 0, x: -14 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 0.7,
+        delay: 0.1,
+        ease: EASE,
+      }}
+      className="block w-fit max-w-full whitespace-nowrap"
+    >
+      <ScatterText text="P Suraj" />
+    </motion.span>
+
+    <motion.span
+      initial={{ opacity: 0, x: -14 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 0.7,
+        delay: 0.18,
+        ease: EASE,
+      }}
+      className="mt-1 block w-fit max-w-full whitespace-nowrap sm:mt-2"
+    >
+      <ScatterText text="Shenoy" />
+    </motion.span>
+  </div>
+
+  {/* Role */}
+  <motion.span
+    initial={{ opacity: 0, x: -14 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{
+      duration: 0.7,
+      delay: 0.28,
+      ease: EASE,
+    }}
+    className="mt-5 block text-[clamp(1.35rem,6.2vw,2.2rem)] font-bold leading-tight tracking-[-0.035em] text-azure"
+  >
+    UI/UX Designer
+  </motion.span>
+</h1>
 
             <motion.p
               initial={{ opacity: 0 }}
